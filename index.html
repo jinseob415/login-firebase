@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short url</title>
+</head>
+<body>
+    <input type="text" />
+    <script>
+        fetch('https://api-ssl.bitly.com/v4/bitlinks', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer {089dcc4b5e0ab6044a8c5bd15070c04ac15beecc}',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "long_url": "https://dev.bitly.com", "domain": "bit.ly", "group_guid": "Ba1bc23dE4F", "title": "Bitly API Documentation", "tags": [ "bitly", "api" ], "deeplinks": [ { "app_id": "com.bitly.app", "app_uri_path": "/store?id=123456", "install_url": "https://play.google.com/store/apps/details?id=com.bitly.app&hl=en_US", "install_type": "promote_install" } ] })
+        });
+    </script>
+</body>
+</html>
